@@ -12,8 +12,11 @@ jobs:
           run: |
             apk add make
             cd Mathematics/Notes && make
+      - name: Check pdf files
+        run: |
+          file Mathematics/Notes/数学笔记.pdf | grep -q 'PDF'
       - name: Upload pdf file
         uses: actions/upload-artifact@v2
         with:
           name: PDF
-          path: notes.pdf
+          path: 数学笔记.pdf
