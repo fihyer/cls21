@@ -13,7 +13,8 @@ jobs:
           working_directory: Mathematics/Notes/
           args: -xelatex -file-line-error -interaction=nonstopmode
           latexmk_use_xelatex: true
-      - name: actions/upload-artifact@v2
+      - name: Upload pdf file
+        uses: actions/upload-artifact@v2
         with:
           name: PDF
           path: notes.pdf
