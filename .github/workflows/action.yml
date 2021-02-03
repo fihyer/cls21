@@ -12,7 +12,6 @@ jobs:
           root_file: 数学笔记.tex
           working_directory: Mathematics/Notes/
           args: -xelatex -file-line-error -interaction=nonstopmode
-          latexmk_use_xelatex: true
       - name: Upload pdf file
         uses: actions/upload-artifact@v2
         with:
