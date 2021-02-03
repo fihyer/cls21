@@ -11,8 +11,6 @@ jobs:
         with:
           run: |
             apk add make
-            tlmgr install centernot
-            tlmgr install txfonts 
             cd Mathematics/Notes && make
       - name: Upload pdf file
         uses: actions/upload-artifact@v2
