@@ -1,0 +1,370 @@
+\chapter{三角函数}
+\label{ch:三角函数}
+
+\begin{introduction}
+  \item 任意角的概念~\ref{def:any-angle}
+  \item 象限角及轴线角概念~\ref{def:quadrant-angle}
+  \item 终边相同的角~\ref{def:angle-set}
+  \item 终边相同角推论~\ref{cor:angle-set-col}
+  \item 圆心角的弧度~\ref{def:central-angle-radian}
+  \item 角度弧度转换
+\end{introduction}
+
+\section{任意角和弧度制}
+
+\subsection{任意角}
+
+\begin{remark}{\vspace{0.3mm}角的概念及表示}
+\begin{enumerate}
+\item 角可以看成平面内\underline{一条射线}绕着它的\underline{端点}旋转所成的图形。
+\item 射线的端点叫做角的\underline{顶点}
+\item 射线的起始位置叫做角的\underline{始边}
+\item 射线的终止位置叫做角的\underline{终边}
+\end{enumerate}
+%\begin{firute}[h]
+\begin{wrapfigure}{r}{0.25\textwidth}
+\begin{center}
+\begin{tikzpicture}
+  \draw
+    (1.5,0) coordinate (A) node[right] {A}
+    -- (0,0) coordinate (O) node[left] {O}
+    -- (-1,1) coordinate (B) node[above left] {B}
+    pic["$\alpha$", draw=orange, ->, angle eccentricity=1.2, angle radius=0.4cm]
+    {angle=A--O--B};
+\end{tikzpicture}	
+\end{center}
+\end{wrapfigure}
+%\end{figure}
+如图所示$O$为$\angle{AOB}$的顶点，$OA$为$\angle{AOB}$的始边，$OB$为$\angle{AOB}$的终边。
+\end{remark}
+
+
+\begin{definition}{任意角}{any-angle}
+\begin{enumerate}
+\item \textbf{正角}：按\textcolor{third}{逆时针}方向旋转形成的角
+\item \textbf{负角}：按\textcolor{third}{顺时针}方向旋转形成的角
+\item \textbf{零角}：\textcolor{third}{没有作任何旋转}的角
+\end{enumerate}
+\end{definition}
+
+
+\begin{note}
+设$\alpha$, $\beta$是任意两个角，如果把角$\alpha$的终边旋转角$\beta$，则最终形成的角为角$\alpha + \beta$。
+\end{note}
+
+
+\begin{definition}{象限角和轴线角}{quadrant-angle}
+在平面直角坐标系中，将角的顶点与原点重合，角的始边与$x$轴的非负半轴重合：
+\begin{enumerate}
+\item 终边在坐标轴上的角，不属于任何一个象限，我们称之为\textcolor{third}{轴线角}；
+\item 终边不在坐标轴上的角我们称之为\textcolor{third}{象限角}。角的终边在第几象限，我们就叫这个角是第几象限角。
+\end{enumerate}
+\end{definition}
+
+
+\begin{remark}
+\begin{enumerate}
+\item 锐角： 大于$0^{\circ}$小于$90^{\circ}$的角。锐角一定是第一象限角，但第一象限角不一定是锐角。
+\item 直角： 等于$90^{\circ}$的角，直角是轴线角，其终边在$y$轴的非负半轴。
+\item 钝角： 大于$90^{\circ}$小于$180^{\circ}$的角。钝角一定是第二象限角，但第二象限角不一定是钝角，即若存在命题$p$, $q$分别为：
+\begin{enumerate}
+\item $p$:角 $\alpha $ 是钝角，
+\item $q$:角 $\alpha $ 是第二象限角，
+\end{enumerate}
+则$p \implies q, q \centernot \implies p$，或我们说$p$是$q$的充分不必要条件。
+\item 平角： 等于$180^{\circ}$的角，平角是轴线角，其终边在$x$轴的非正半轴。
+\item 周角： 等于$360^{\circ}$的角，周角是终边在$x$轴的非负半轴的轴线角。
+\end{enumerate}
+\end{remark}
+
+
+\begin{definition}{终边相同的角}{angle-set}
+任意角$\alpha$终边相同的角$\beta \in S$
+\begin{equation}
+S = \{\beta \mid \beta = \alpha + k \cdot 360^{\circ}, k \in \mathbb{Z} \}
+\end{equation}
+\end{definition}
+
+\begin{corollary}{终边相同的角}{angle-set-col}
+\begin{enumerate}
+\item 终边相同的角之间相差$360^{\circ}$的整数倍。
+\item 终边在同一直线上的角之间相差$180^{\circ}$的整数倍。
+\item 终边相互垂直的两条直线上的角之间相差$90^{\circ}$的整数倍。
+\end{enumerate}
+\end{corollary}
+
+\begin{note}{判断象限角的方法}
+\begin{enumerate}
+\item 图像法： 根据已知条件在平面直角坐标系中画出相应的角，根据象限角的定义观察终边的位置，确定其为第几象限角。
+\item 解析法： 先将角$\alpha$转化为$\alpha = k \cdot 360^{\circ} + \beta \left(k \in \mathbb{Z}, \mbox{且} 0^{\circ} < \beta < 360^{\circ} \right)$的形式；然后判断角$\beta$的终边所在的象限； 角$\beta$是第几象限角，角$\alpha$就是第几象限角。
+\end{enumerate}
+\end{note}
+
+\begin{note}
+\begin{table}[htbp]
+  \caption{象限角与轴线角的集合\label{tab:color thm}}
+  \centering
+  \begin{tabular}{ll}
+  \toprule
+              分类
+              & 集合\\
+  \midrule
+              终边在$x$轴
+              & $\{\alpha \mid \alpha = k \cdot 180^{\circ}, k \in \mathbb{Z}\}$\\
+              终边在$x$轴非负半轴
+              & $\{\alpha \mid \alpha = k \cdot 360^{\circ}, k \in \mathbb{Z}\}$\\
+              终边在$x$轴非正半轴
+              & $\{\alpha \mid \alpha = k \cdot 360^{\circ} + 180^{\circ}, k \in \mathbb{Z}\}$ \\
+              终边在$y$轴
+              & $\{\alpha \mid \alpha = k \cdot 180^{\circ} + 90^{\circ}, k \in \mathbb{Z}\}$\\
+              终边在$y$非负半轴
+              & $\{\alpha \mid \alpha = k \cdot 360^{\circ} + 90^{\circ}, k \in \mathbb{Z}\}$\\
+              终边在$y$非正半轴
+              & $\{\alpha \mid \alpha = k \cdot 360^{\circ} + 270^{\circ}, k \in \mathbb{Z}\}$\\
+			  终边在$y=x$轴上              
+              & $\{\alpha \mid \alpha = k \cdot 180^{\circ} + 45^{\circ}, k \in \mathbb{Z}\}$\\
+              终边在坐标轴
+              & $\{\alpha \mid \alpha = k \cdot 90^{\circ}, k \in \mathbb{Z}\}$\\
+              第一象限角
+              & $\{\alpha \mid \alpha = 0^{\circ} + k \cdot 360^{\circ} < \alpha < 90^{\circ} + k \cdot 90^{\circ}, k \in \mathbb{Z}\}$\\
+              第二象限角
+              & $\{\alpha \mid \alpha = 90^{\circ} + k \cdot 360^{\circ} < \alpha < 180^{\circ} + k \cdot 90^{\circ}, k \in \mathbb{Z}\}$\\
+              第三象限角
+              & $\{\alpha \mid \alpha = 180^{\circ} + k \cdot 360^{\circ} < \alpha < 270^{\circ} + k \cdot 90^{\circ}, k \in \mathbb{Z}\}$\\
+              第四象限角
+              & $\{\alpha \mid \alpha = 270^{\circ} + k \cdot 360^{\circ} < \alpha < 360^{\circ} + k \cdot 90^{\circ}, k \in \mathbb{Z}\}$\\
+  \bottomrule
+  \end{tabular}
+\end{table}
+\end{note}
+
+\vspace{0.4cm}
+\begin{remark}
+因为角是由端点和端点出发的两条射线（始边和终边）构成的，因此在直角坐标系上轴线角要么是在$x$轴的非正半轴或非负半轴，要么就是在$y$轴的非正半轴或者非负半轴，而不是$x$的正半轴或负半轴（或$y$轴的正半轴或负半轴）。
+\end{remark}
+
+\vspace{0.4cm}
+
+\begin{note}{已知角$\alpha$所在象限，求角$\displaystyle \theta = \frac{\alpha}{n} \mbox{或} \theta = n \alpha \left(n \in {\mathbb{N}}^\star \right) $ 所在象限}
+\begin{enumerate}
+\item 先将角$\alpha$的范围转化为含$k$的不等式；
+\item 两边同乘或者同除$n$;
+\item 对$k$进行奇偶性讨论，即
+\begin{enumerate}
+\item $k = 2n \left( n \in \mathbb{Z} \right)$
+\item $k = 2n + 1 \left( n \in \mathbb{Z} \right)$
+\end{enumerate} 
+时不等式的结果，从而得到$\theta$所在的象限。
+\end{enumerate}
+\end{note}
+
+\begin{exercise}
+写出终边在$y$轴上的角的集合.
+\end{exercise}
+
+\begin{solution}
+在$0^{\circ} \sim 360^{\circ}$范围内，终边在$y$轴上的角由两个：$90^{\circ} \mbox{和} 270^{\circ}$.\\
+因此，所有与$90^{\circ}$
+\end{solution}
+
+\subsection{弧度制}
+
+在初中我们知道“度”是将圆平均分成360份，期中的一份所对的角叫做$1$度
+
+\begin{figure}
+	\begin{center}
+	\begin{tikzpicture}
+	\def\R{5cm}
+	\draw (0,0) circle[radius=\R];
+	\draw (0,0) -- (0:\R) (0,0) -- (1:\R) (0,0) -- (57.30:\R);
+	\end{tikzpicture}
+	\end{center}
+\end{figure}
+
+\begin{definition}{角度制与弧度制}{degree-radian}
+\begin{enumerate}
+\item 角度：由角（圆心角）所对的\textcolor{third}{圆弧的长度}除以\textcolor{third}{圆的周长}再乘以\textcolor{third}{$360^{\circ}$}为角的角度，一般用“${}^{\circ} $”来标记，读作“度”。一度可以继续分为60“分”或3600“秒”，使用角度为单位度量角的单位制角角度制。
+
+\item 弧度：圆心角所对的\textcolor{third}{圆弧的长度}除以\textcolor{third}{圆的半径}所得的值为角的弧度。一般用“$rad$”来标记弧度（通常可省略不写），读作“弧度”。用弧度作为单位度量角的单位制叫做\textcolor{third}{弧度制}。
+\end{enumerate}
+\end{definition}
+%
+%\begin{note}
+%若半径为$r$的圆，圆心角$\theta$所对的圆弧长度为$l$，由初中知识我们可知圆的周长$C$为
+%\begin{equation}
+%C = 2 \pi r
+%\end{equation}
+%若圆周的360份中的一份所对应的圆心角$\phi$的角度是$1^{\circ}$，即$\displaystyle \abs{\phi}=\frac{1^{\circ}}{360^{\circ}}=\frac{1}{360}$，那么圆周360等分中的$l$份的圆心角$\theta$的角度若为$n^{\circ}$，那么$\displaystyle \theta = n \cdot \phi \mbox{且} \frac{1}{n} = \frac{l}{C}$：
+%\begin{equation}
+%\abs{\theta} = \frac{l}{C} \cdot 360^{\circ} = \frac{l}{2 \pi r} \cdot 360^{\circ}
+%\end{equation}
+%若半径为$r=1$的圆心角对应的弧长为$l=r$, 则$\displaystyle 1 \hspace{1mm} rad = \frac{\pi r}{l} \cdot 180^{\circ} $
+%\end{note}
+
+\begin{definition}{圆心角的弧度}{central-angle-radian}
+在半径为$r$的$\odot O$中，弧长为$l$的弧所对的圆心角为$\alpha rad$则：
+\begin{equation}
+\displaystyle \abs{\alpha} = \frac{l}{r}
+\end{equation}
+\end{definition}
+
+\begin{definition}{终边相同的角（弧度制）}{radian-set}
+与角$\alpha$终边相同的角$\beta \in S$
+\begin{equation}
+S = \{\beta \mid \beta = \alpha + 2k\pi, k \in \mathbb{Z}\}
+\end{equation}
+\end{definition}
+
+\begin{note}
+由角度制和弧度制的定义可知
+\begin{eqnarray}
+180^{\circ} = \pi \hspace{1mm} rad \iff \left \{
+\begin{array}{l}
+\displaystyle 1^{\circ} = \frac{\pi}{180} \hspace{1mm} rad \approx 0.01745 \hspace{1mm} rad \vspace{0.5cm} \\
+\displaystyle 1 \hspace{1mm} rad = {\left( \frac{180}{\pi} \right)}^{\circ} \approx 57.30^{\circ}
+\end{array}	
+\end{eqnarray}
+\end{note}
+
+\begin{definition}{扇形的弧长和面积公式}{arc-area-def}
+若扇形的半径为$R$, 弧长为$l$, 面积为$S$, 且$\alpha \left(0 < \alpha < 2\pi \right)$为扇形的圆心角，则：
+\begin{eqnarray}
+l=\alpha R \hspace{5mm} \left(\mbox{弧长公式}\right) \\
+\displaystyle S=\frac{1}{2}lR=\frac{1}{2}\alpha R^2 \hspace{5mm} \left(\mbox{面积公式}\right)
+\end{eqnarray}
+\end{definition}
+
+\begin{note}
+\begin{enumerate}
+\item 零扇形的弧长和面积公式解题时，角的单位必须是弧度。
+\item 求扇形面记得最大值时，利用面积公式转化为求二次函数最大值问题。
+\item 在解决弧长和扇形面积问题时，要合理利用圆心角所在的三角形。
+\end{enumerate}
+\end{note}
+
+
+\section{三角函数的概念}
+
+\subsection{三角函数的概念}
+
+给定任意角$\alpha \in \mathbb{R}$， 它的终边$OP$与单位圆交点$P$的坐标都是角$\alpha$的函数。
+
+\begin{definition}{三角函数}{trig-function}
+任意角$\alpha \in \mathbb{R}$, 点$P(x,y)$是角$\alpha$的终边$OP$与单位圆$\odot O$的交点，则：
+\begin{enumerate}
+\item 正弦函数就是点$P$的纵坐标$y$ ，记作$\sin{\alpha}$，即 $y=\sin{\alpha}$
+\item 余弦函数就是点$P$的纵坐标$x$ ，记作$\cos{\alpha}$，即 $x=\cos{\alpha}$
+\item 正切就是点$P$的纵坐标$y$与横坐标$x$的比值 ，记作$\tan{\alpha}$，即 $\displaystyle \frac{y}{x}=\tan{\alpha}, (x \neq 0)$
+\end{enumerate}
+\end{definition}
+
+\begin{conclusion}
+$\forall \alpha \in \mathbb{R}$，若$\alpha$终边上任意一点$P(x,y), (x, y) \neq (0, 0)$，则：
+\begin{equation}
+\begin{array}{l}
+\displaystyle \sin{\alpha} = \frac{y}{\sqrt[]{x^2+y^2}} \\
+\displaystyle \cos{\alpha} = \frac{x}{\sqrt[]{x^2+y^2}} \\
+\displaystyle \tan{\alpha} = \frac{y}{x}
+\end{array}
+\end{equation}
+\end{conslusion}
+\subsection{同角三角函数的基本关系}
+
+\begin{definition}{终边相同的角的同一三角函数}{trigo-equ1}
+	\begin{equation}
+	\begin{array}{l}
+		\sin{\alpha} = \sin{\left(\alpha + k \cdot 2 \pi \right)}, k \in \mathbb{Z} \\
+		\cos{\alpha} = \cos{\left(\alpha + k \cdot 2 \pi \right)}, k \in \mathbb{Z} \\
+		\tan{\alpha} = \tan{\left(\alpha + k \cdot 2 \pi \right)}, k \in \mathbb{Z}	
+	\end{array}
+	\end{equation}
+\end{definition}
+
+利用\textcolor{third}{终边相同的角的同一三角函数值相等}结论，我们可以将求任意角的三角函数值转换到求$\displaystyle 0 \sim 2\pi$（即$0^{\circ} \mid 360^{\circ}$)之间角的三角函数值。
+
+\begin{definition}{同角三角函数之间的关系}
+	\begin{equation}
+		{\sin{\alpha}}^2 + {\cos{\alpha}}^2 = 1\\
+		
+	\end{equation}
+\end{definition}
+
+\section{诱导公式}
+
+
+
+\section{三角函数的图像和性质}
+
+\begin{remark}
+函数的三要素、三性质
+\begin{enumerate}
+\item 定义域
+\item 对应更关系
+\item 值域
+\end{enumerate}
+\begin{enumerate}
+\item 单调性
+\item 奇偶性
+\item 周期性
+\end{enumerate}
+\end{remark}
+
+\subsection{正弦函数、余弦函数的图像}
+\subsection{正弦函数、余弦函数的性质}
+\subsubsection{周期性}
+\subsubsection{奇偶性}
+\subsubsection{单调性}
+
+\subsection{正切函数的图像}
+\subsection{正切函数的性质}
+\subsubsection{周期性}
+\subsubsection{奇偶性}
+\subsubsection{单调性}
+
+\section{三角恒等变换}
+\subsection{和角公式}
+\subsection{差角公式}
+\subsection{倍角公式}
+
+\section{函数$y=A\sin{\omega x + \varphi}$}
+
+
+\section{三角函数的应用}
+
+\newpage
+\begin{problemset}
+\item 十九大指出中国的电动汽车革命早已展开，通过以新能源汽车代替汽/柴油车，中国正在大力实施一项将重塑全球汽车行业的计划，2020年某企业计划引进新能源汽车生产设备，通过市场分析，全年需投入固定成本3000万元，每生产$x$(百辆)需要另投入成本$y$（万元），且
+\begin{equation*}
+y = \left \{
+	\begin{array}{l}
+		10x^2+100x, 0 < x <40\\
+		\displaystyle 501x + \frac{10000}{x}-4500, x \geq 40
+	\end{array}
+\end{equation*}
+由市场调研知，每辆车售价$5$万元，且全年内生产的车辆当你那能全部销售完。
+\begin{enumerate}
+	\item 求出2020年的利润$S$（万元）关于年产量$x$（百辆）的函数关系式；（利润=销售额-成本）
+	\item 当2020年产量为多少百辆时，企业所获利润最大？并求出最大利润。
+\end{enumerate}
+
+\vspace{4mm}
+\item 已知某工厂生产机器设备的年固定成本为200万元。没生产1台还需另投入20万元。设该公司一年内共生产该机器设备$x$台并全部销售完，每台机器设备销售的收入为$R(x)$万元，且
+\begin{equation*}
+	R(x) = \left \{
+	\begin{array}{l}
+		\displaystyle 40 + \frac{800}{x}, 0 < x \leq 30\\
+		\displaystyle \vspace{2mm} \frac{280\sqrt{x}+1000}{x}, x > 30
+	\end{array}
+\end{equation*}
+\begin{enumerate}
+	\item 求年利润$y$（万元）关于年产量$x$（台）的函数解析式；
+	\item 当年产量为多少台时，该工厂生产所获得的的年利润最大？并求出最大年利润。
+\end{enumerate}
+
+\vspace{4mm}
+\item 湖南娄底某高科技企业决定开发生产一款大型电子设备。生产这种设备的年固定成本为500万元，每生产$x$台，需要零投入成本$h(x)$（万元），当年生产量小于60台时$h(x)=x^2+20x$（万元）；当年产量不少于60台时$\displaystyle h(x)=102x+\frac{9800}{x}-2080$。若每台设备的售价为100万元，通过市场分析，假设该企业生产的电子设备能全部售完。
+\begin{enumerate}
+	\item 求年利润$L(x)$（万元）关于年产量$x$（台）的函数关系式；
+	\item 年产量为多少台时，该企业在这一电子设备的生产中获利最大？
+\end{enumerate}
+\end{problemset}

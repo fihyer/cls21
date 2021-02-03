@@ -1,0 +1,134 @@
+\chapter{指数函数与对数函数}
+\label{ch:指数函数与对数函数}
+
+\begin{introduction}
+  \item 零点存在定理~\ref{thm:Bolzano-Cauchy1}
+\end{introduction}
+
+指数函数与对数函数是两类重要的、应用广泛的基本初等函数。
+
+\section{指数}
+
+\section{指数函数}
+
+\subsection{指数函数的概念}
+
+\subsection{指数函数的图像和性质}
+
+\marginpar{
+\begin{note}
+  \begin{scriptsize}
+  现代指数的概念是于1637由Rene Descartes引入的，他给乘方数设计了专门的记号系统，即指数函数。而约翰·纳皮尔（John Napier）早在20多年前的1614年就发明了对数，他还以一己之力编写了历史上第一张对数表。当时的欧洲，随着天文学和航海的发展，人们处理的数字越来越大，计算越来越复杂，社会上有很强的简化计算的需求，作为计算工具而被发明的对数，不过是回应了时代的呼唤应运而生而已。
+\end{scriptsize}
+\end{note}
+}
+
+\section{对数}
+
+在数学的发展历史上，先有对数，然后才有了指数幂函。如果从运算的角度看，加、减是一级运算，乘、除是二级运算，乘方、开方是三级运算。运算数量级的不同据定了运算的复杂度，一般来说运算的数量级越高，运算的复杂的也就越高。对数可以化乘除为加减，化乘方开方为乘除，将高级运算降为次级运算。因此在对数发明出来的那个年代有一句话叫做：对数的的发明让天文学家增加了一倍的寿命！对数不仅仅在输的运算中占有重要地位，而且也是学习对数函数的基础。
+
+\begin{definition}{对数的概念}{log}
+如果 $a^x=N$ $(a \geq 0$, 且 $a \neq 1)$, 那么数 $x$ 叫做以 \underline{$a$ 为\textbf{底}} $N$的对数。记作:
+\begin{equation}
+x=\log_{a}{N}
+\end{equation}
+其中 $a$ 叫做对数的底数， $N$ 叫做真数。
+\end{definition}
+
+\begin{note}
+对比回忆指数：
+\begin{enumerate}
+\item 指数是计算从1开始，按照某个固定的增长速率$\alpha$，“增长”一段时间$t$之后的总量$M$。用数学符号记作：$M=\alpha^t$
+\item 那么对数就是计算以某个固定的增长速率$\alpha$，从1开始“增长”到一个固定量$M$所需要的时间$t$。用数学符号记作： $t=\log_{\alpha}{M}$
+\end{enumerate}
+例如，从1开始以两倍的速度即$2/s$增长，当到3秒的时候得到的值就是8，也即是$8=2^3$。如果以两倍的速度增长，时间是零，那么得到的值就是1（即$1=2^0$，没有任何增长），如果增长了一段时间之后变成了分数例如变成了$ \frac{1}{2}$，那么也就是说在达到1之前$-1$秒的时候的量是$\frac{1}{2}$（因为从$ \frac{1}{2}$开始以两倍的速度增长一秒就是1）， 即从现在的$0$为起点的时间角度看，从起始量1增长了$-1$秒（倒退1秒）得到的量就是$\frac{1}{2} = 2^{-1}$
+\end{note}
+\section{对数函数}
+
+\subsection{对数函数的概念}
+
+\subsection{对数函数的图像和性质}
+
+\subsection{不同函数增长的差异}
+
+一次函数$f(x)=kx+b, (k>0)$、幂函数$f(x)=x^n, (n>0)$、指数函数$f(x)=a^x, (a>1)$ 以及对数函数$f(x)=\log_{a}{x}, (a > 1)$ 在区间 $(0, +\infty)$上都是增函数。
+
+
+     \begin{tikzpicture}
+      \begin{axis}[
+      	  xmin=0,xmax=5,
+          ymin=-2,ymax=7,
+          axis lines = center,
+          legend pos = south west,
+          xlabel = $x$,
+          ylabel = {$y$},
+      ]
+      %Below the red parabola is defined
+      \addplot [
+          domain=-1:5, 
+          samples=100, 
+          color=blue,
+      ]
+      {2*x};
+      \addplot [
+          domain=-2:5, 
+          samples=100, 
+          color=red,
+      ]
+      {2^x};
+
+      \node[label={180:{(1,2)}},circle,fill,inner sep=1pt] at (axis cs:1,2) {};
+      \node[label={180:{(2,4)}},circle,fill,inner sep=1pt] at (axis cs:2,4) {};
+      \addlegendentry{$2x$}      
+      \addlegendentry{$2^x$}
+      \end{axis}
+    \end{tikzpicture}
+
+
+    \begin{tikzpicture}
+      \begin{axis}[
+      	  xmin=0,xmax=50,
+          ymin=-4,ymax=5,
+          axis lines = center,
+          xlabel = $x$,
+          ylabel = {$y$},
+      ]
+      %Below the red parabola is defined
+
+      \addplot [
+          domain=-40:40, 
+          samples=100, 
+          color=blue,
+      ]
+      {(1/10)*x};
+      \addplot [
+          domain=0:60, 
+          samples=100, 
+          color=green,
+      ]
+      {log10(x)};
+      
+      \addlegendentry{$\frac{1}{10}_x$}      
+      \addlegendentry{$\ln{x}$}
+      \end{axis}
+    \end{tikzpicture}
+\section{函数的应用（二）}
+
+回忆一元二次函数、方程与不等式章节，我们用二次函数的观点分别讨论了一元二次方程以及一元二次不等式，也总结了一元二次不等式的\underline{解集端点}就是其对应的一元二次方程的\underline{实数根}，同时是其对应的一元二次函数的\underline{零点}。\\
+
+对于$x^2+4x-8=0$这样的方程，我们可以通过公式法求解，但是如果是类似$log_{2}{x}+2x-6=0$，或者是$e^{x-1}+4x-4=0$这样的方程,
+\subsection{函数的零点与方程的解}
+
+\begin{theorem}{函数零点存在}{Bolzano-Cauchy1}
+如果函数$y=f(x)$在区间$\left[a,b\right]$上的图像是\underline{\textbf{一条连续不断的曲线}}，且有$f(a)f(b)<0$，那么，函数$y=f(x)$在区间$\left(a,b\right)$内上\underline{\textbf{至少有一个零点}}，即$\exists c \in \left(a,b\right)$，使得$f(c)=0$，这个$c$就是方程$f(x)=0$的解。
+\end{theorem}
+
+\marginpar{
+\begin{note}
+  \begin{scriptsize}
+零点存在定理（Bolzano-Cauchy 第一定理）在数学分析上是“闭区间上连续函数的介值定理（Bolzano-Cauchy 第二定理）”的特例，是捷克数学佳波尔查诺（Bolzano）在1817年首先证明的。但是由于但是缺乏实数理论，证明不严格，后来又由德国数学家魏尔施特拉斯（Weierstrass）将这个证明严密化。
+  \end{scriptsize}
+\end{note}
+}
+
+\subsection{二分法}

@@ -1,0 +1,206 @@
+\chapter{一元二次函数、方程和不等式}
+\label{ch:一元二次函数方程和不等式}
+
+\begin{introduction}
+  \item 不等式的基本性质~\ref{property:inequality}
+  \item 不等式的其他性质~\ref{property:inequality-others}
+  \item 基本不等式~\ref{def:MA}
+  \item 一元二次不等式~\ref{def:polynomial-inequality}
+\end{introduction}
+
+
+
+\section{等式性质与不等式性质}
+
+\begin{axiom}{基本事实}{}
+\begin{enumerate}
+\item 如果 $a-b$ 是正数，那么 $a > b$; 即$a>b \iff a-b>0$;
+\item 如果 $a-b$ 等于零，那么 $a = b$; 即$a=b \iff a-b=0$;
+\item 如果 $a-b$ 是负数，那么 $a < b$; 即$a<b \iff a-b<0$.
+\end{enumerate}
+\end{axiom}
+
+\begin{note}{比较大小的方法}
+\begin{itemize}
+        \item 作差比较法的两种情况:
+        \begin{itemize}
+		\item 将差进行因式分解转化为几个因式相乘;
+		\item 将差式通过配方转化为几个非负实数之和，然后判断正负。
+        \end{itemize}
+        \item 作商比较法通常适用于两代数式同号的情况。
+        \item 构造函数：将要比较的两个数作为一个函数的两个函数值，根据函数的单调性得出大小关系。
+\end{itemize}
+\end{note}
+
+\vspace{1cm}
+
+\begin{property}\label{property:inequality}
+不等式的基本性质
+\begin{enumerate}
+\item 不等式的对称性：如果 $a>b$ 那么 $b<a$ 如果 $b<a$，那么 $a>b$. 即$a>b \iff b<a$.
+\item 不等式的传递性：如果 $a>b$, $b>c$, 那么 $a>c$. 即$a>b, b>c \Longrightarrow a>c$.
+\item 不等式的可加性：如果 $a>b$, 那么 $a+c>b+c$. 即$a>b \iff a+c>b+c$.
+\item 不等式的可乘性：
+\begin{enumerate}
+\item 如果 $a>b$, $c>0$, 那么 $ac>bc$. 即$a>b, c>0 \Longrightarrow ac>bc$.
+\item 如果 $a>b$, $c<0$, 那么 $ac<bc$. 即$a>b, c<0 \Longrightarrow ac<bc$.
+\end{enumerate}
+\item 不等式的同向可加性：如果 $a>b$, $c>d$, 那么 $a+c>b+d$. 即$a>b, c>d \Longrightarrow a+c>c+d$.
+\item 不等式的同向可乘性：如果 $a>b>0$, $c>d>0$, 那么 $a>c$. 即$a>b, b>d \Longrightarrow ac>bd$.
+\item 不等式的可乘方性：
+\begin{enumerate}
+\item 如果 $a>b>0$, 那么 $a^n>b^n$, 即$a>b>0 \Longrightarrow a^n>b^n (n\in N, n \geq 2)$.
+\item 如果 $a>b>0 (n \in N, n \geq 2)$, 那么 $\sqrt[n]{b}>\sqrt[n]{b}$. 即$a>b>0 \Longrightarrow \sqrt[n]{a}>\sqrt[n]{b} (n\in N, n \geq 2)$.
+\end{enumerate}
+\end{enumerate}
+\end{property}
+
+\vspace{1cm}
+\begin{property}\label{property:inequality-others}
+不等式的其他性质
+\begin{enumerate}
+\item 倒数性质：
+  \begin{enumerate}
+        \item $\displaystyle a>b , ab>0 \implies \frac{1}{a} < \frac{1}{b}$.
+        \item $\displaystyle \frac{1}{a}<\frac{1}{b}, ab>0 \implies a>b$.
+        \item $\displaystyle a<0<b \implies \frac{1}{a}<\frac{1}{b}$.
+        \item $\displaystyle a>b>0, 0<c<d \implies \frac{a}{c}>\frac{b}{d}$.
+        \item $0<a<x<b$ 或 $\displaystyle a<x<b<0 \implies \frac{1}{b}<\frac{1}{x}<\frac{1}{a}$
+  \end{enumerate}
+\item 分数性质：若 $a>b>0, m>0$ \\
+\begin{enumerate}
+        \item 则 $\displaystyle \frac{b}{a} < \frac{b+m}{a+m}; \frac{b}{a} > \frac{b-m}{a-m} (b-m>0)$;\\
+        \item 则 $\displaystyle \frac{a}{b} > \frac{a+m}{b+m}; \frac{a}{b} < \frac{a-m}{b-m} (b-m>0)$.
+\end{enumerate}
+\end{enumerate}
+\end{property}
+
+
+\section{基本不等式}
+
+\begin{definition}{基本不等式}{MA}
+如果 $a, b \in \mathbb{R}, a>0, b>0$ 那么
+\begin{equation}
+\displaystyle \frac{a+b}{2} \geq \sqrt{ab} 
+\end{equation}
+当且仅当 $a=b$ 时, 等号成立。其中, $\displaystyle \frac{a+b}{2}$ 叫做正数 $a, b$ 的算数平均数，$\sqrt{ab}$ 叫做正数 $a, b$ 的几何平均数。
+\end{definition}
+
+\begin{note}
+\begin{enumerate}
+\item 基本不等式中的$a$与$b$都是实数，如果不是实数，例如已知向量的内积$\vec{a}\cdot \vec{b} = 1$, 则$\vec{a} + \vec{b} \geq 2\sqrt[]{\vec{a} \cdot \vec{b}} = 2$，就是错的。
+\item 基本不等式中的$a$与$b$这两个符号可以代表数字，也可以代表代数式（单项式、多项式、整式、分式、指数式、对数式、三角式等等），例如：
+\begin{eqnarray*}
+\displaystyle x + \frac{2}{x} \geq 2\sqrt[]{2}\\
+\displaystyle \frac{2}{x} + \frac{x}{2} \geq 2, (x >0)\\
+2^x + 2^y \geq 2\sqrt[]{2^(x+y)}\\
+\log_{a}{b} + \log_{b}{a} \geq 2 (\log_{a}{b} > 0)\\
+\displaystyle \sin{x} + \frac{1}{\sin{x}} \geq 2 (0< \sin{x} \leq 1)\\
+\displaystyle \frac{a^2+b^2}{ab} = \frac{a}{b} + \frac{b}{a} \geq 2 (a, b > 0)\\
+\end{eqnarray*}
+\item 熟悉理解基本不等是的“正向操作”还要注意利用反向操作，即$\displaystyle \sqrt[]{ab} \leq \frac{a+b}{2}$
+\end{enumerate}
+\end{note}
+
+\begin{note}{重要不等式}
+\begin{enumerate}
+        \item $a^2+b^2 \geq 2ab (a,b \in \mathbb{R})$, 当且仅当$a=b$ 时取等号；
+        \item \vspace{2mm} $\displaystyle ab \leq \left( \frac{a+b}{2}\right)^2 (a, b\in\mathbb{R})$, 当且仅当 $a=b$ 时取等号；
+        \item \vspace{2mm} $\displaystyle \sqrt{a^2+b^2} \geq \left( \frac{a+b}{2}\right)^2 (a,b\in\mathbb{R})$, 当且仅当 $a=b$ 时取等号; 
+        \item \vspace{2mm} $\displaystyle min(a, b) \leq \frac{2ab}{a+b} \leq \sqrt{ab} \leq \frac{a+b}{2} \leq \sqrt{\frac{a^2+b^2}{2}} \leq max(a, b) $
+\end{enumerate}
+\end{note}
+
+\begin{remark}
+上述“重要不等式笔记”中：
+\begin{enumerate}
+\item $\displaystyle \frac{2ab}{a+b}=\frac{2}{\frac{1}{a}+\frac{1}{b}}$，被称为“调和平均数”;
+\item $\sqrt{ab}$，被称为“几何平均数”
+\item $\frac{a+b}{2}$，称为“算数平均数”
+\item $\sqrt{\frac{a^2+b^2}{2}}$，称为“平方平均数”
+\end{enumerate}
+
+\end{remark}
+
+\begin{theorem}{和定积最大，积定和最小}
+设$a$, $b$都是正数：
+\begin{enumerate}
+\item 若$a+b=S (S\mbox{为常数})$， 那么当$a=b$时，$\displaystyle (ab)_{max}=\frac{S^2}{4}$
+\item 若$ab=P (P\mbox{为常数})$， 那么当$a=b$时，$\displaystyle (a+b)_{min}=2\sqrt[]{P}$
+\end{enumerate}
+\end{theorem}
+
+
+\begin{note}{基本不等式的性质}
+要利用基本不等式求最值首先要满足一下三个条件：
+\begin{enumerate}
+\item 一正：相加或着想乘的两个数需为正数；
+\item 二定：两个数的和或着积为定值（常数值）；
+\item 三相等：当且仅当相加或者相乘的这两个数相等的时候基本不等式取等号。
+\end{enumerate}
+\end{note}
+
+\vspace{3mm}
+\begin{note}{利用基本不等式求最值的方法}
+\begin{enumerate}
+\item 直接解法：如果所给条件满足“一正，二定，三相等”，则直接套用基本不等式。
+\item 配凑法：根据所给代数式的“外型”配凑除积、和为常数的形式，然后在利用基本不等式求最值。
+\item 换元法：
+\item 1的代换法：如果所给条件为分数和定值（整数和定值）形式，让求整数和（分数和）的最值，则将所求（和）式子乘以已知式子并乘以定值的倒数，化简后利用基本不等式求最值。
+\item 消元法：
+\begin{enumerate}
+\item 根据所给条件（一般为方程）建立两个变量之间的（代数）函数关系，将其中一个变量代入所求代数式中
+\end{enumerate}
+\end{enumerate}
+\end{note}
+
+
+\section{二次函数与一元二次方程、不等式}
+
+\begin{definition}{一元二次不等式}{polynomial-inequality}
+只含有一个未知数，且未知数的最高次数是2的不等式，称为\textcolor{third}{一元二次不等式}。一元二次不等式的一般形式为：
+\begin{equation}
+ax^2+bx+c<0 \mbox{或} ax^2+bx+c>0
+\end{equation}
+其中$a$，$b$，$c$均为常数，且$a \neq 0$
+\end{definition}
+
+\begin{remark}
+对于二次函数$y=ax^2+bx+c \left(a \neq 0 \right)$，我们把使$y=ax^2+bx+c=0$的实数$x$叫做二次函数的\textcolor{second}{零点}，而实数$x$也正是二次函数与平面直角坐标系$x$轴交点的$x$坐标。
+\end{remark}
+
+\begin{table}[htbp]
+  \caption{二次函数与一元二次方程、不等式的解的对应关系\label{tab:color thm}}
+  \centering
+  \begin{tabular}{cccc}
+  \toprule
+              
+              & $\triangle > 0$
+              & $\vartriangle = 0$
+              & $\vartriangle < 0$\\
+  \midrule
+              $y=ax^2+bx+c \left(a > 0 \right)$
+              & 两个零点($x_1 < x_2$)
+              & 一个零点($x_1 = x_2$)
+              & 无零点\\
+              $ax^2+bx+c= 0 \left(a > 0 \right)$
+              & $x=x_1 \mbox{或} x=x_2$
+              & $\displaystyle x=x_1 = x_2 = -\frac{b}{2a}$)
+              & 无实数根\\
+              $ax^2+bx+c>0 \left(a > 0 \right)$
+              & $\{ x \mid x<x_1 \mbox{或} x>x_2\}$
+              & $\displaystyle \{ x \mid x \neq -\frac{b}{2a}\}$
+              & $\mathbb{R} $\\
+              $ax^2+bx+c<0 \left(a > 0 \right)$
+              & $\{ x \mid x_1 < x < x_2\}$
+              & $\varnothing $
+              & $\varnothing $\\
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{problemset}
+\item 已知$0<x<1, 0<y<1$， 若$M=xy, N=x+y-1$，则$M$与$N$的大小关系是(\hspace{1cm})
+\choice{$M<N$}{$M>N$}{$M=N$}{不确定}
+\item 
+\end{problemset}

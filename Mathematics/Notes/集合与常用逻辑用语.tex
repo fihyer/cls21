@@ -1,0 +1,465 @@
+\chapter{集合与常用逻辑用语}
+\label{ch:集合与常用逻辑用语}
+
+\begin{introduction}
+  \item 集合概念~\ref{def:set}
+  \item 集合的性质~\ref{property:set-property}
+  \item 集合的表示~\ref{def:rep}
+  \item 子集定义~\ref{def:subset}
+  \item 真子集定义~\ref{def:proper-subset}
+  \item 子集、真子集性质~\ref{property:set-property}
+  \item 并集定义~\ref{def:union}
+  \item 交集定义~\ref{def:intersection}
+  \item 补集定义~\ref{def:complementary}
+  \item 集合的运算~\ref{property:set-operation}
+  \item 容斥原理~\ref{thm:IO}
+\end{introduction}
+
+只要研究问题，就有研究对象。这些研究对象都是数学中的元素，而且数学研究的很多对象又都是元素间具有某些关系的集合。为了简洁、准确的表达数学研究对象以及研究范围，我们需要集合（论）的语言和工具。另一方面，数学具有严谨性，而且它的严谨性是有一系列表示关系的逻辑术语把表示概念的名词链接在一起而体现的，由此，从条件到结论便不会产生歧义，可以被其他人理解。因此为了保证数学的最基本严谨性和准确性，逻辑用语便成了数学表达和交流的另一个基本语言和工具。
+
+
+\section{集合的概念}
+
+在研究问题、表达交流以及日常交流时，大家在同一个范围、讨论的是同类问题（事情），这样才会又实际效果，否则就会出现风马牛不相及的局面。同样的，研究数学问题是，也学要明确研究对象、确定研究范围、准确表达数学对象及研究范围。
+
+\begin{definition}{集合描述性定义}{set}
+  集合是具有某种特性的事物的整体，或是一些确定对象的汇集。构成集合的事物或者对象称为集合的\textcolor{main}{\textbf{元素}}或着成员。 
+  \begin{enumerate}
+	  \item 集合的元素用小写拉丁字母 $a, b, c, ...$ 表示；
+	  \item 集合本身用大写拉丁字母 $A, B, C, ...$ 表示。
+  \end{enumerate}
+  如果 $a$ 是 $A$ 的元素，就记做\underline{$a \in A$}， 读作 $a$ \textbf{属于} $A$; 如果 $a$ 不是 $A$ 的元素，就记做\underline{$a \notin A$}， 读作 $a$ \textbf{不属于} $A$。
+\end{definition}
+
+\begin{remark}
+  集合是一个原始的、不定义的概念，它同平面几何中的“点”、“线”、“面”这些概念一样都是指描述性的说明。在理解集合的时候要集合实例体会集合的\textbf{整体性} 和\textbf{广泛性}:
+  \begin{enumerate}
+    \item \textbf{整体性} : 集合是一个整体，暗指“所有”、“全部”、“全体”的含义，因此一些对象一旦组成了集合，那么这个集合就是这些对象的总体。
+    \item \textbf{广泛性} : 集合中的元素可以是任何事物，现实生活中的我们看到的、听到的、问到的、触摸到的、想到的各种各样的事物或一些抽象的符号、数字等等，都可以看作是集合的元素。
+  \end{enumerate}
+\end{remark}
+
+\begin{property}\label{property:set-property}
+集合的特性（集合中元素的特性）
+  \begin{enumerate}
+    \item \textcolor{main}{\textbf{确定性}} : 给定一个集合，任给一个元素，那么该元素要么属于这个集合要么不属于这个集合，不允许又模棱两可的情况出现。即给定集合 $A$ ， 则 $\exists a, a \in A$ 或 $a \notin A$。 
+    \item \textcolor{main}{\textbf{互异性}} : 一个集合中任意两个元素都是互不相同的，即集合中的每个元素只能出现一次。即给定集合$A$ 和任意的元素 $a, b \in A$, 则 $a \neq b$。
+    \item \textcolor{main}{\textbf{无序性}} : 一个集合中每个元素的地位都是相同的，元素之间没有顺序区别。
+  \end{enumerate}
+\end{property}
+
+\marginpar{
+\begin{note}
+  \begin{scriptsize}
+  \textcolor{main}{\textbf{有理数}}：正整数、负整数、正分数(正的有限小数、无限小数）、负分数（负的有限小数、无限小数）以及零的统称。\textcolor{main}{\textbf{实数}}: 有理数和无理数的统称。
+\end{scriptsize}
+\end{note}
+}
+
+\begin{table}[htbp]
+  \caption{常用数集及其记法\label{tab:color thm}}
+  \centering
+  \begin{tabular}{cccc}
+  \toprule
+              数集
+              & 意义
+              & 记法
+              & 示例\\
+  \midrule
+              非负整数集（或自然数集） 
+              & 全体非负整数组成的集合 
+              & $\mathbb{N}$
+              & $0 \in \mathbb{N}$ \\
+              正整数集
+              & 全体正整数组成的集合 
+              & $\mathbb{N}^*$ 或$\mathbb{N}_+$
+              & $0 \notin \mathbb{N}^*$ \\
+              整数集
+              & 全体整数组成的集合 
+              & $\mathbb{Z}$
+              & $1 \in \mathbb{Z}$； $0.45 \notin \mathbb{Z}$\\
+              有理数集
+              & 全体有理数组成的集合 
+              & $\mathbb{Q}$
+              & $\displaystyle \frac{3}{4} \in \mathbb{Q}$； $\pi \notin \mathbb{Z}$\\
+              实数集
+              & 全体实数组成的集合 
+              & $\mathbb{R}$
+              & $\sqrt{2}+1 \in \mathbb{R}$ \\
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+
+我们可以通过使用语言或者图的方式来表示集合，如果要求不严格我们可以直接使用图或者自然语言来表示（描述）一个集合。但在数学研究中我们通常使用严谨的表示方式: 列举法和描述法。
+
+\begin{definition}{集合的表示法}{rep}
+	\begin{enumerate}
+	  \item 列举法 : 把集合中的所有元素\underline{一一列举}出来，用逗号“,”分隔开，并且用花括号“$\{\}$”括起来表示的方法叫做列举法。
+	  \item 描述法 : 设$A$是一个集合，且给定范围 $D$, $x$ 为集合 $A$ 中的元素， $P(x)$ 为集合 $A$ 中所有元素 $x$ 所具有的\underline{共同特征}，那么用\underline{$\{x\in D \mid P(x)\}$}或\underline{$A=\{x \mid P(x), x \in D \}$}或\underline{$A=\{x \mid P(x)$ 且 $ x \in D \}$}的方式表示集合 $A$ 的方法叫做描述法。
+	\end{enumerate}
+\end{definition}
+
+\begin{note}{描述法注意事项}
+	\begin{enumerate}
+	  \item 描述法可以概括为：集合 = $\{$ 元素 $\mid$ 共同特征 $\}$
+	  \item 在使用描述法表示集合的时候一定要： 
+	  \begin{enumerate}
+	    \item 将集合中元素的代表符号写出来（用什么符号表示元素）；
+	    \item 元素所具有的共同特征一定要明确，不能出现未被清晰说明的字母；
+	  \end{enumerate}
+	\end{enumerate}
+\end{note}
+
+\begin{note}{与集合中的元素有关的问题的求解策略}
+	\begin{enumerate}
+		\item 确定集合中的元素是什么，即集合是\textcolor{main}{数集}还是\textcolor{main}{点集}
+		\item 看结合中的元素满足什么\textcolor{main}{共同特征（限制条件）}
+		\item 根据限制条件列式求参数的值或确定集合中元素的个数
+		\item 检验集合中元素的\textcolor{main}{互异性}
+	\end{enumerate}
+\end{note}
+
+
+\section{集合间的基本关系}
+
+\begin{definition}{子集}{subset}
+设两个集合$A$，$B$，如果集合$A$中的任意一个元素都是集合$B$中的元素，那么就成集合$A$是集合$B$的\textcolor{third}{\textbf{子集}}，记作
+\begin{equation}
+A \subseteq B \left(\mbox{或} B \supseteq A \right)
+\end{equation}
+读作“$A$包含于$B$”（或$B$包含$A$）
+\end{definition}
+
+\begin{definition}{真子集}{proper-subset}
+设两个集合$A$，$B$，如果集合$A \subseteq B $，但存在元素$x \in B$且$x \notin B$,那么就称集合$A$是集合$B$的\textcolor{third}{\textbf{真子集}}，记作
+\begin{equation}
+A \subsetneqq B \left(\mbox{或} B \supsetneqq A \right)
+\end{equation}
+读作“$A$真包含于$B$”（或$B$真包含$A$）
+\end{definition}
+
+\begin{definition}{空集}{emptyset}
+\underline{不包含任何元素的集合}叫做\textcolor{third}{空集}，记作$\varnothing$
+\end{definition}
+
+\begin{property}\label{property:set-property}
+子集、真子集性质
+	\begin{enumerate}
+		\item 任何一个集合都是它本身的子集，即$\forall A, A \subseteq A$
+		\item 空集是任何集合的子集，即$\forall A, \varnothing \subseteq A$
+		\item 若$A$， $B$， $C$是集合，则：
+		\begin{enumerate}
+			\item $A=A$
+			\item $A \subseteq B, \mbox{且} B \subseteq A \iff A=B$
+			\item $A \subseteq B, \mbox{且} B \subseteq A \implies A \subseteq C$
+			\item $A \subsetneqq B, \mbox{且} B \subsetneqq A \implies A \subseteq C$
+		\end{enumerate}
+		\item 若$U$为全集，对于任何的集合$A$，$B$, 下列命题等价：
+		\begin{enumerate}
+			\item $A \subseteq B$
+			\item $A \cap B = A$
+			\item $A \cup B = B$
+			\item $\complement_{U}{B} \subseteq \complement_{U}{A}$
+		\end{enumerate}
+		\item 若集合$A$为非空集合，则：
+		\begin{enumerate}
+			\item $A$的子集的个数为$2^n$
+			\item $A$的真子集的个数为$2^{n}-1$
+			\item $A$的非空子集的个数为$2^{n}-1$
+			\item $A$的非空真子集的个数为$2^{n}-2$
+		\end{enumerate}
+	\end{enumerate}
+\end{property}
+
+%\begin{conclusion}
+%\begin{enumerate}
+%\item 空集是任何集合的子集，是非空集合的真子集, 即$\forall A, B \neq \empty$，则$\varnothing \subseteq A, \varnothing \subsetneqq B$
+%\item 任何一个集合是它本身的子集，即$\forall A, A \subseteq A$
+%\item 子集和真子集都有传递性，即：$\forall A, B, C$，如果$A \subseteq B, B\subseteq C$，则$A \subseteq C$
+%\end{enumerate}
+%\end{conclusion}
+
+
+\begin{note}{判断两个集合间的关系方法}
+	\begin{enumerate}
+		\item 对于用描述法表示的集合，先把集合化简后，从表达式中寻找两个集合间的关系
+		\item 对于用列举法表示的集合，直接从元素中找两个集合的关系
+	\end{enumerate}
+\end{note}
+
+
+\begin{note}{根据两个集合间的关系求参数方法}
+已知两个集合之间的关系（参考“判断两个集合间的关系”笔记），将条件转化为元素或者区间端点的关系，利用数轴、韦恩图等可视工具将元素或者区间端点关系准确画出，进而转化为参数所满足的条件后解决求参问题。
+\end{note}
+
+
+\section{集合的基本运算}
+
+\begin{definition}{并集}{union}
+由所有属于集合$A$\textcolor{third}{或}属于集合$B$的元素组成的集合$C$，我们称$C$为集合$A$与集合$B$的\textcolor{third}{并集}，记作$C = A \cup B$，读作$C$等于$A$并$B$，即
+\begin{equation}
+C = A \cup B = \{x \mid x \in A, \mbox{或} x \in B\}
+\end{equation}
+\end{definition}
+
+\begin{definition}{交集}{intersection}
+由所有属于集合$A$\textcolor{third}{且}属于集合$B$的元素组成的集合$C$，我们称$C$为集合$A$与集合$B$的\textcolor{third}{交集}，记作$C = A \cap B$，读作$C$等于$A$交$B$，即
+\begin{equation}
+C = A \cap B = \{x \mid x \in A,\mbox{且} x \in B\}
+\end{equation}
+\end{definition}
+
+\begin{definition}{全集}
+如果一个集合含有\textcolor{third}{所研究问题的所有元素}，那么就成这个集合为\textcolor{third}{全集}，记作$U$。
+\end{definition}
+
+\begin{definition}{补集}{complementary}
+对于一个集合$A$，由全集$U$中\textcolor{third}{不属于}集合$A$的元素组成的集合$C$，我们称$C$为集合$A$相对于全集$U$的\textcolor{third}{补集}，记作$C = \complement_{U}{A}$，即
+\begin{equation}
+C = \complement_{U}{A} = \{x \mid x \in U,\mbox{且} x \notin A\}
+\end{equation}
+\end{definition}
+
+\begin{property}\label{property:set-operation}
+设$U$为全集，给定任意集合$A, B, C$，则由如下集合运算性质
+	\begin{enumerate}
+		\item 交换律
+		\begin{enumerate}
+			\item $A \cap B = B \cap A$
+			\item $A \cup B = B \cup A$
+		\end{enumerate}
+		\item 结合律
+		\begin{enumerate}
+			\item $(A \cap B) \cap C = A \cap (B \cap C)$
+			\item $(A \cup B) \cup C = A \cup (B \cup C)$
+		\end{enumerate}
+		\item 分配律
+		\begin{enumerate}
+			\item $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$
+			\item $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
+		\end{enumerate}
+		\item 德.摩根律
+		\begin{enumerate}
+			\item $\complement_{U}{A \cap B} = \complement_{U}{A} \cup \complement_{U}{B}$
+			\item $\complement_{U}{A \cup B} = \complement_{U}{A} \cap \complement_{U}{B}$
+		\end{enumerate}
+		\item 吸收律
+		\begin{enumerate}
+			\item $A \cap (A \cup B) = A$
+			\item $A \cup (A \cap B) = A$
+		\end{enumerate}
+		\item 求补律
+		\begin{enumerate}
+			\item $A \cup \complement_{U}{A} = U$
+			\item $A \cap \complement_{U}{A} = \varnothing$
+		\end{enumerate}
+	\end{enumerate}
+\end{property}
+
+%Venn Graph
+% Definition of circles
+%\def\firstcircle{(0,0) circle (1.5cm)}
+%\def\secondcircle{(0:2) circle (1.5cm)}
+%\def\thirdcircle{(1:2) circle (1.5cm)}
+%
+%\colorlet{circle edge}{blue!50}
+%\colorlet{circle area}{blue!20}
+%
+%\tikzset{filled/.style={fill=circle area, draw=circle edge, thick},
+%    outline/.style={draw=circle edge, thick}}
+%
+%\setlength{\parskip}{5mm}
+%% Set A and B
+%\begin{tikzpicture}
+%    \begin{scope}
+%        \clip \firstcircle;
+%        \fill[filled] \secondcircle;
+%    \end{scope}
+%    \draw[outline] \firstcircle node {$A$};
+%    \draw[outline] \secondcircle node {$B$};
+%    \node[anchor=south] at (current bounding box.north) {$A \cap B$};
+%\end{tikzpicture}
+%
+%%Set A or B but not (A and B) also known a A xor B
+%\begin{tikzpicture}
+%    \draw[filled, even odd rule] \firstcircle node {$A$}
+%                                 \secondcircle node{$B$};
+%    \node[anchor=south] at (current bounding box.north) {$\overline{A \cap B}$};
+%\end{tikzpicture}
+%
+%% Set A or B
+%\begin{tikzpicture}
+%    \draw[filled] \firstcircle node {$A$}
+%                  \secondcircle node {$B$};
+%    \node[anchor=south] at (current bounding box.north) {$A \cup B$};
+%\end{tikzpicture}
+%
+%% Set A but not B
+%\begin{tikzpicture}
+%    \begin{scope}
+%        \clip \firstcircle;
+%        \draw[filled, even odd rule] \firstcircle node {$A$}
+%                                     \secondcircle;
+%    \end{scope}
+%    \draw[outline] \firstcircle
+%                   \secondcircle node {$B$};
+%    \node[anchor=south] at (current bounding box.north) {$A - B$};
+%\end{tikzpicture}
+%
+%% Set B but not A
+%\begin{tikzpicture}
+%    \begin{scope}
+%        \clip \secondcircle;
+%        \draw[filled, even odd rule] \firstcircle
+%                                     \secondcircle node {$B$};
+%    \end{scope}
+%    \draw[outline] \firstcircle node {$A$}
+%                   \secondcircle;
+%    \node[anchor=south] at (current bounding box.north) {$B - A$};
+%\end{tikzpicture}
+%
+%\begin{tikzpicture}
+%	\begin{scope}
+%		\clip \firstcircle;
+%		\clip \secondcircle;
+%		\clip \thirdcircle;	
+%	\end{scope}
+%	\draw[outline] \firstcircle node {$A$};
+%    \draw[outline] \secondcircle node {$B$};
+%	\draw[outline] \thirdcircle node {$C$};
+%\end{tikzpicture}
+
+
+%集合运算解题方法
+\begin{note}{集合运算的方法}
+	\begin{enumerate}
+		\item 如果集合中的元素是离散的，或者用列举法表示的集合（元素间无法无规律），使用韦恩图进行求解
+		\item 如果集合中的元素是连续的实数（通常集合为用描述法表示），使用数轴工具将集合表示出来进行求解，此时要注意端点的情况（是空心还是实心）
+	\end{enumerate}
+\end{note}
+
+
+\begin{note}{根据集合的运算求参数的方法}
+	\begin{enumerate}
+		\item 与不等式有关的集合，一般利用数轴解决，但要注意端点值的取舍
+		\item 若结合中元素能一一列举，则一般先用观察法得到集合中元素之间的关系，再列方程（组）求解
+		\item 在参数求出后一定要验证集合中元素的互异性，以及题中给出其他的条件
+	\end{enumerate}
+\end{note}
+
+\subsection{元素的个数}
+
+\begin{definition}{有限集/无限集}{}
+	\begin{enumerate}
+		\item 含有\textcolor{third}{有限个元素}的集合$A$叫做\textcolor{third}{有限集}，有限集$A$中元素的个数用$card\left(A\right)$ 或 $\mid A \mid$来表示
+		\item 含有\textcolor{third}{无限个元素}的集合$B$叫做\textcolor{third}{无限集}
+	\end{enumerate}
+\end{definition}
+
+\begin{theorem}{容斥原理(特殊情况1)}{IO}
+对任意两个有限集合$A$， $B$，有
+\begin{equation}
+card\left(A \cup B \right) = card\left(A\right) + card\left(B\right) - card\left(A \cap B \right)
+\end{equation}
+或
+\begin{equation}
+\mid A \cup B \mid = \mid A \mid + \mid B \mid - \mid A \cap B \mid
+\end{equation}
+\end{theorem}
+
+\begin{theorem}{容斥原理（特殊情况2）}{IO2}
+对任意三个有限集合$A$，$B$，$C$， 有
+\begin{equation}
+\mid A \cup B \cup C \mid = \mid A \mid + \mid B \mid + \mid C \mid - \mid A \cap B \mid - \mid B \cap C \mid + \mid A \cap B \cap C \mid
+\end{equation}
+\end{theorem}
+
+
+\section{充分条件与必要条件}
+
+\begin{definition}{命题}{statement}
+\textcolor{third}{可以判断真假}，类似“若$p$，则$q$”这样的\textcolor{third}{陈述句}叫做\textcolor{third}{命题}。我们一般称$p$为命题的条件，$q$为命题的结论。判断为真的语句叫做真命题，判断为假的语句叫做假命题。
+\end{definition}
+
+\begin{definition}{充分、必要条件}{statement}
+	\begin{enumerate}
+		\item “若$p$，则$q$”为真命题，叫做由$p$推出$q$，记作$p \implies q$，我们说$p$是$q$的充分条件，$q$是$p$的必要条件。
+		\item “若$p$，则$q$”为假命题，叫做由$p$推不出$q$，记作$p \centernot\implies q$，我们说$p$不是$q$的充分条件（或$p$是q的非充分条件），$q$不是$p$的必要条件(或$q$是$p$的非必要条件）
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{逆命题}{statement}
+如果原命题为“若$p$，则$q$”，则“若$q$，则$p$”叫做原命题的\textcolor{third}{逆命题}
+\end{definition}
+
+\begin{definition}{充要条件}{iff}
+“若$p$，则$q$”和“若$q$，$p$”都是真命题，我们说由$p$通过推理可以得出$q$，而且由$q$通过推理也可以得出$p$，记作则$p \iff q$。我们称$p$是$q$的充分必要条件，简称充要条件。
+\end{definition}
+
+\begin{note}
+假设$p$是条件，$q$是结论，设$A$、$B$分别为$p$、$q$所描述对象的集合，则有下列定义和推论：
+	\begin{enumerate}
+	\item 由$p$可以退出$q$，则$p$是$q$的充分条件，则$q$是$p$的必要条件，此时 $A \subseteq B$。即$p \implies q$ 等价于 $A \subseteq B$。若在此前提条件下在还有如下情况：
+	\begin{enumerate}
+		\item 由$q$可以推出$p$，则$p$与$q$互为充分必要条件（简称“充要条件”），此时 $A=B$。即 $p \implies q, \mbox{且} q \implies p$ 等价于 $A=B$。
+		\item 由$q$不可以推出$p$，则$p$是$q$的充分不必要条件，此时$A \subsetneqq B$。即 $p \implies q, \mbox{且} q \centernot \implies p$ 等价于 $A \subsetneqq B$。
+	\end{enumerate} 
+	\item 由$p$不可以推出$q$，且$q$可以推出$p$，则$p$是$q$的必要不充分条件， 此时$B \subsetneqq A$。即 $p \centernot \implies q, \mbox{且} q \implies p$ 等价于 $B \subsetneqq A$。
+	\item 由$p$不可以推出$q$，且$q$不可以推出$p$，则$p$是$q$的既不充分也不必要条件，此时$A \cap B = \varnothing$。即 $p \centernot \implies q, \mbox{且} q \centernot \implies p$  等价于 $A \cap B = \varnothing$。
+	\end{enumerate}
+\end{note}
+
+
+\section{全称量词与存在量词}
+根据命题的定义，我们知道命题可以判断真假。但是如果陈述句中含有变量，由于不知道变量代表什么（数、范围），因此无法判断真假，所以不是命题。如果用短语对陈述句中的变脸进行（取值范围）限定，我们就可以根据变量所代表的具体内容判断真假。
+
+\begin{definition}{全称量词、存在量词}
+对含有变量的陈述句中\textcolor{third}{变量}进行范围限定的短语，我们在数学上称为\textcolor{third}{量词}。根据对变量范围限定的不同量词可以分为全称量词和存在量词：
+\begin{enumerate}
+\item 对全体变量进行范围限定的量词，我们称为\textcolor{third}{全称量词}， 符号为$\forall$，常用的全称量词有“所有的”，“任意一个”，“一切”，“任给”，“全体”等
+\item 对个别或这部分变量进行范围限定的量词，我们称为\textcolor{third}{存在量词}，符号为$\exists$，常用的存在量词有“存在一个”，“有些”，“对某些”，“至少有一个”等 
+\end{enumerate}
+\end{definition}
+
+\begin{definition}{全称量词命题与存在量词命题}{}
+\begin{enumerate}
+\item 全称量词命题：含有全称量词的命题，记作：$\forall x \in M, p(x)$，读作“对于$M$中的任意一个$x$，$p(x)$都成立”
+\item 存在量词命题：含有存在量词的命题，记作：$\exists x \in M, p(x)$，读作“在$M$中的至少存在一个元素$x$，使$p(x)$成立”
+\end{enumerate}
+其中$M$为变量$x$的取值范围；$p(x)$表示含有变量的语句
+\end{definition}
+
+\begin{definition}{命题的否定}
+命题的否定就是对这个命题的真值（真或假）进行取反。即命题的否定值否定该命题的结论，因此命题的否定与原命题的真假性相反。
+\end{definition}
+
+\begin{remark}
+	\begin{enumerate}
+		\item 若全称量词命题$\forall x \in M, p(x)$为真命题，则它的否定$\exists x \in M, \neg p(x)$为假命题
+		\item 若存在量词命题$\exists x \in M, p(x)$为真命题，则它的否定$\forall x \in M, \neg p(x)$为假命题
+	\end{enumerate}
+\end{remark}
+
+
+
+%第一章题集
+\newpage
+\begin{problemset}
+	\item 集合$A=\{0,2,a\}$， $B=\{1, a^2\}$，若$A \cup B$有5个元素，则$a$的值可能为(\hspace{1cm})
+	\choice{0}{1}{2}{3}
+	\item 设集合$A=\{x \mid -1 \leq x < 2 \}$， $B=\{x \mid x < a \}$, 若$A \cap B = \varnothing$, 则$a$的取值范围是(\hspace{1cm})
+	\choice{$-1<a\leq 2$}{$a>2$}{$a \geq -1$}{$a > -1$}
+	\item 已知集合$A=\{x \mid x^2-3x+2=0, x \in \mathbb{R} \}, B=\{x \mid 0<x<5, x \in  \mathbb{R} \}$，则 满足条件$A \subsetneqq C \subsetneqq B$的集合$C$的个数是（\hspace{1cm}）
+	\choice{1}{2}{3}{4}
+	\item 设$S$为实数集$\mathbb{R}$的非空子集，若对任意$x, y \in S$， 都有$x+y, x-y, xy \in S$，则称$S$为封闭集。下列命题正确的是(\hspace{1cm})
+	\choice{自然数集$\mathbb{N}$是封闭集}{整数集$\mathbb{Z}$是封闭集}{集合$S=\{a+b\sqrt{2}\mid a, b \in \mathbb{Z}\}$为封闭集}{若$S$为封闭集，且$1\in S$,则$S$一定为无限集}
+	\item  已知集合$A=\{x \mid ax^2-2x+1=0\}$只有一个元素, $B=\{x \mid x^2 -3ax + 2 <0\}$， $C=\{x \mid 0 \leq x < 2\}$， 则(\hspace{1cm}) 
+	\choice{$A \subsetneqq B$}{$B \subsetneqq A$}{$A = B$}{$A \cap B = \varnothing$}
+	\item 已知集合$M=\{x \mid -4<x<2\}, N=\{x \mid x^2-x-6<0\}$，则$M \cap N = $(\hspace{1cm})
+	\choice{$\{x \mid -4<x<3\}$}{$\{x \mid -4<x<-2\}$}{$\{x \mid  -2<x<2 \}$}{$\{x \mid 2<x<3 \}$}
+	\item 已知集合$A=\{x \mid x^2-5x+6>0 \}, B=\{x \mid x-1<0 \}$，则$A \cap B = \left(\hspace{1cm}\right)$
+	\choice{$(-\infty, 1)$}{$\(-2, 1)$}{$(-3, -1)$}{$(3, +\infty)$}
+	\item  已知$a, b \in \mathbb{R}$, 若$\displaystyle \{a, \frac{b}{a}, 1 \} = \{a^2, a+b, 0 \}$， 则$a^{2020}+b^{2020}$的值是\rule{1cm}{0.1mm}个元素。
+	\item  由实数$x$， $-x \abs{x}$， $\abs{x}$， $\sqrt[]{x^2}$， $-\sqrt[3]{-x^3}$所组成的集合最多含有\rule{1cm}{0.1mm}个元素，最少含有\rule{1cm}{0.1mm}个元素。
+\end{problemset}
