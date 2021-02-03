@@ -11,4 +11,9 @@ jobs:
         with:
           root_file: 数学笔记.tex
           working_directory: Mathematics/Notes/
-          latexmk_use_lualatex: true
+          args: -xelatex -file-line-error -interaction=nonstopmode
+          latexmk_use_xelatex: true
+      - name: actions/upload-artifact@v2
+        with:
+          name: PDF
+          path: notes.pdf
