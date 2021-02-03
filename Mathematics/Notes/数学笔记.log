@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.9.23)  3 FEB 2021 21:40
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.9.23)  3 FEB 2021 22:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1645,42 +1645,26 @@ Package: xeCJK-listings 2020/02/18 v3.8.2 xeCJK patch file for listings
 \l__xeCJK_listings_max_char_int=\count405
 \l__xeCJK_listings_flag_int=\count406
 )
-(./数学笔记.aux (./集合与常用逻辑用语.aux
+(./数学笔记.aux)
+Runaway argument?
+{{\global \let \futurelet \CJK@next@token {\global \let }\futurelet \CJK@next@t
+oken \ETC.
+./数学笔记.tex:29: File ended while scanning use of \@input.
+<inserted text> 
+                \par 
+l.29 \begin{document}
+                     
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
 
-LaTeX Warning: Label `property:set-property' multiply defined.
-
-
-LaTeX Warning: Label `def:statement' multiply defined.
-
-
-LaTeX Warning: Label `def:statement' multiply defined.
-
-) (./一元二次函数方程和不等式.aux
-
-LaTeX Warning: Label `tab:color thm' multiply defined.
-
-) (./函数的概念与性质.aux
-
-LaTeX Warning: Label `tab:color thm' multiply defined.
-
-
-LaTeX Warning: Label `tab:color thm' multiply defined.
-
-) (./指数函数与对数函数.aux) (./三角函数.aux
-
-LaTeX Warning: Label `tab:color thm' multiply defined.
-
-) (./证明.aux)
-
-LaTeX Warning: Label `tab:color thm' multiply defined.
-
-)
 \openout1 = `数学笔记.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 29.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 29.
- (/usr/local/texlive/2020/texmf-dist/tex/latex/txfonts/omltxmi.fd
+(/usr/local/texlive/2020/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 29.
@@ -1738,6 +1722,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 29.
 LaTeX Info: Redefining \pageref on input line 29.
 LaTeX Info: Redefining \nameref on input line 29.
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1917,29 +1904,63 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 17.28pt on input line 36.
  [2
 
-] (./数学笔记.toc
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 1.
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 1.
- [3
-
-])
+] (./数学笔记.toc)
 \tf@toc=\write8
 \openout8 = `数学笔记.toc'.
 
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 49.
- [4]
+ [3
+
+]
 \openout2 = `集合与常用逻辑用语.aux'.
 
  (./集合与常用逻辑用语.tex
 第\nobreakspace {}一\nobreakspace {}章 1.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 5.
 LaTeX Font Info:    Trying to load font information for U+ding on input line 5.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/bbding/Uding.fd
 File: Uding.fd 1996/02/01 v1.0 BBding font definitions
 )
+
+LaTeX Warning: Reference `def:set' on page 1 undefined on input line 5.
+
+
+LaTeX Warning: Reference `property:set-property' on page 1 undefined on input l
+ine 6.
+
+
+LaTeX Warning: Reference `def:rep' on page 1 undefined on input line 7.
+
+
+LaTeX Warning: Reference `def:subset' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Reference `def:proper-subset' on page 1 undefined on input line 
+9.
+
+
+LaTeX Warning: Reference `property:set-property' on page 1 undefined on input l
+ine 10.
+
+
+LaTeX Warning: Reference `def:union' on page 1 undefined on input line 11.
+
+
+LaTeX Warning: Reference `def:intersection' on page 1 undefined on input line 1
+2.
+
+
+LaTeX Warning: Reference `def:complementary' on page 1 undefined on input line 
+13.
+
+
+LaTeX Warning: Reference `property:set-operation' on page 1 undefined on input 
+line 14.
+
+
+LaTeX Warning: Reference `thm:IO' on page 1 undefined on input line 15.
+
 
 LaTeX Font Warning: Font shape `TU/FandolKai-Regular(0)/b/n' undefined
 (Font)              using `TU/FandolKai-Regular(0)/m/n' instead on input line 2
@@ -1956,7 +1977,10 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.0pt on input line 60.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 10.0pt on input line 60.
- [2] [3] [4] [5] [6] [7]
+ [2] [3] [4]
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 12.0pt on input line 351.
+ [5] [6] [7]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 14.4pt on input line 449.
 
@@ -1995,6 +2019,21 @@ or  <return>  to continue without it.
 
  (./一元二次函数方程和不等式.tex
 第\nobreakspace {}二\nobreakspace {}章 2.
+
+LaTeX Warning: Reference `property:inequality' on page 9 undefined on input lin
+e 5.
+
+
+LaTeX Warning: Reference `property:inequality-others' on page 9 undefined on in
+put line 6.
+
+
+LaTeX Warning: Reference `def:MA' on page 9 undefined on input line 7.
+
+
+LaTeX Warning: Reference `def:polynomial-inequality' on page 9 undefined on inp
+ut line 8.
+
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 1 in font nullfont!
@@ -2018,6 +2057,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  (./函数的概念与性质.tex
 第\nobreakspace {}三\nobreakspace {}章 3.
+
+LaTeX Warning: Reference `def:function' on page 13 undefined on input line 5.
+
+
+LaTeX Warning: Reference `def:monotonicity' on page 13 undefined on input line 
+6.
+
+
+LaTeX Warning: Reference `cor:monotonicity-cor' on page 13 undefined on input l
+ine 7.
+
+
+LaTeX Warning: Reference `def:composite-function' on page 13 undefined on input
+ line 8.
+
 Missing character: There is no 为 in font txr!
 Missing character: There is no 常 in font txr!
 Missing character: There is no 数 in font txr!
@@ -2025,26 +2079,15 @@ Missing character: There is no 数 in font txr!
 
 
 
-] [14]
-
-./函数的概念与性质.tex:166: LaTeX Error: \begin{enumerate} on input line 144 ended by \
-end{note}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.166 \end{note}
-                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[15] [16] [17] [18]) [19]
+] [14] [15] [16] [17] [18]) [19]
 \openout2 = `指数函数与对数函数.aux'.
 
  (./指数函数与对数函数.tex
 第\nobreakspace {}四\nobreakspace {}章 4.
+
+LaTeX Warning: Reference `thm:Bolzano-Cauchy1' on page 20 undefined on input li
+ne 5.
+
 [20
 
 
@@ -2067,6 +2110,24 @@ Underfull \hbox (badness 1314) in paragraph at lines 132--132
 
  (./三角函数.tex
 第\nobreakspace {}五\nobreakspace {}章 5.
+
+LaTeX Warning: Reference `def:any-angle' on page 23 undefined on input line 5.
+
+
+LaTeX Warning: Reference `def:quadrant-angle' on page 23 undefined on input lin
+e 6.
+
+
+LaTeX Warning: Reference `def:angle-set' on page 23 undefined on input line 7.
+
+
+LaTeX Warning: Reference `cor:angle-set-col' on page 23 undefined on input line
+ 8.
+
+
+LaTeX Warning: Reference `def:central-angle-radian' on page 23 undefined on inp
+ut line 9.
+
 
 Package wrapfig Warning: wrapfigure used inside a conflicting environment on in
 put line 25.
@@ -2145,50 +2206,24 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./三角函数.tex:288: Missing $ inserted.
-<inserted text> 
-                $
-l.288 ^^I^^I
-            
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 286--288
-
- []
-
-
-./三角函数.tex:289: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.289 ^^I\end{equation}
-                       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./三角函数.tex:289: LaTeX Error: \begin{tcb@savebox} on input line 286 ended by \en
+./三角函数.tex:288: LaTeX Error: \begin{tcb@savebox} on input line 286 ended by \en
 d{equation}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.289 ^^I\end{equation}
+l.288 ^^I\end{equation}
                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./三角函数.tex:289: Missing $ inserted.
+./三角函数.tex:288: Missing $ inserted.
 <inserted text> 
                 $
-l.289 ^^I\end{equation}
+l.288 ^^I\end{equation}
                        
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2196,18 +2231,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./三角函数.tex:289: Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.289 ^^I\end{equation}
-                       
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-./三角函数.tex:289: Missing } inserted.
+./三角函数.tex:288: Missing } inserted.
 <inserted text> 
                 }
-l.289 ^^I\end{equation}
+l.288 ^^I\end{equation}
                        
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2216,35 +2243,40 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-./三角函数.tex:290: LaTeX Error: \begin{definition} on input line 285 ended by \end
+Underfull \hbox (badness 10000) in paragraph at lines 286--289
+
+ []
+
+
+./三角函数.tex:289: LaTeX Error: \begin{definition} on input line 285 ended by \end
 {tcb@savebox}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.290 \end{definition}
+l.289 \end{definition}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./三角函数.tex:290: Package xcolor Error: Undefined color `tcbcol@origin'.
+./三角函数.tex:289: Package xcolor Error: Undefined color `tcbcol@origin'.
 
 See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.290 \end{definition}
+l.289 \end{definition}
                       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-./三角函数.tex:290: Undefined control sequence.
+./三角函数.tex:289: Undefined control sequence.
 \tcb@set@normal@unbroken@beforeafter ...b@nobreak 
                                                   {\iftcb@ignorenobreak \els...
-l.290 \end{definition}
+l.289 \end{definition}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2252,10 +2284,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./三角函数.tex:290: Undefined control sequence.
+./三角函数.tex:289: Undefined control sequence.
 <argument> \the \dimexpr \tcb@width 
                                     +\kvtcb@bbright \relax 
-l.290 \end{definition}
+l.289 \end{definition}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2263,10 +2295,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./三角函数.tex:290: Undefined control sequence.
+./三角函数.tex:289: Undefined control sequence.
 <argument> \tcb@width 
                       
-l.290 \end{definition}
+l.289 \end{definition}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2274,19 +2306,19 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./三角函数.tex:290: Missing number, treated as zero.
+./三角函数.tex:289: Missing number, treated as zero.
 <to be read again> 
                    \relax 
-l.290 \end{definition}
+l.289 \end{definition}
                       
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./三角函数.tex:290: Illegal unit of measure (pt inserted).
+./三角函数.tex:289: Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.290 \end{definition}
+l.289 \end{definition}
                       
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, bp, or sp; but yours is a new one!
@@ -2295,10 +2327,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./三角函数.tex:290: Undefined control sequence.
+./三角函数.tex:289: Undefined control sequence.
 <argument> \tcb@width 
                       -\kvtcb@right@rule 
-l.290 \end{definition}
+l.289 \end{definition}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2306,85 +2338,68 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./三角函数.tex:290: Missing number, treated as zero.
+./三角函数.tex:289: Missing number, treated as zero.
 <to be read again> 
                    \tcb@footnote@cnt@i 
-l.290 \end{definition}
+l.289 \end{definition}
                       
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 
-./三角函数.tex:290: LaTeX Error: \begin{note} on input line 143 ended by \end{defin
-ition}.
+./三角函数.tex:289: LaTeX Error: \begin{document} ended by \end{definition}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.290 \end{definition}
+l.289 \end{definition}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 329.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathop' on input line 329.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathgroup' on input line 329.
+./三角函数.tex:289: Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.289 \end{definition}
+                      
+Things are pretty mixed up, but I think the worst is over.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\symoperators' on input line 329.
+(hyperref)                removing `math shift' on input line 328.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 329.
+(hyperref)                removing `\mathop' on input line 328.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\omega' on input line 329.
+(hyperref)                removing `\mathgroup' on input line 328.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\varphi' on input line 329.
+(hyperref)                removing `\symoperators' on input line 328.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 329.
+(hyperref)                removing `\@ifnextchar' on input line 328.
 
-[27] [28]
-./三角函数.tex:343: Missing \right. inserted.
-<inserted text> 
-                \right .
-l.343 \end{equation*}
-                     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
-./三角函数.tex:358: Missing \right. inserted.
-<inserted text> 
-                \right .
-l.358 \end{equation*}
-                     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\omega' on input line 328.
 
-) [29]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\varphi' on input line 328.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 328.
+
+[27] [28]) [29]
 No file 数学笔记.bbl.
 \openout2 = `证明.aux'.
 
@@ -2400,17 +2415,6 @@ No file 数学笔记.bbl.
 Underfull \hbox (badness 10000) in paragraph at lines 71--73
 
  []
-
-./数学笔记.tex:88: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.88               你必须弄清楚问题}
-                            
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
 
 
 Overfull \hbox (324.35844pt too wide) in paragraph at lines 83--96
@@ -2432,16 +2436,19 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 102.
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 52320 strings out of 479418
- 1264744 string characters out of 5884585
- 1967959 words of memory out of 5000000
- 68832 multiletter control sequences out of 15000+600000
- 594564 words of font info for 135 fonts, out of 8000000 for 9000
+ 52282 strings out of 479418
+ 1263338 string characters out of 5884585
+ 1966959 words of memory out of 5000000
+ 68809 multiletter control sequences out of 15000+600000
+ 591731 words of font info for 131 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 76i,15n,126p,864b,2326s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,15n,126p,864b,2192s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 数学笔记.pdf (36 pages).
+Output written on 数学笔记.pdf (35 pages).
