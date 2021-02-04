@@ -18,8 +18,28 @@ jobs:
       - name: Check pdf files
         run: |
           file Mathematics/Notes/数学笔记.pdf | grep -q 'PDF'
-      - name: Upload pdf file
+      - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
           name: 数学笔记.pdf
           path: Mathematics/Notes/数学笔记.pdf
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ setps.create_release.outputs.upload_url }}
+          asset_path: Mathematics/Notes/数学笔记.pdf
+          asset_name: 数学笔记.pdf
+          asset_content_type: application/pdf
