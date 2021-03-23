@@ -3,7 +3,8 @@
 
 \begin{introduction}
   \item 克莱姆法则~\ref{thm:cramer}
-  \item 两点距离公式~\ref{def:point_dst}
+  \item 两点距离公式~\ref{def:point-distance}
+  \item 点到直线的距离~\ref{def:point-line-distance}
 \end{introduction}
 
 
@@ -14,7 +15,7 @@
 \begin{table}[htbp]
   \caption{两直线的交点坐标\label{tab:color thm}}
   \centering
-  \begin{tabular}{cc}
+  \begin{tabular}{ll}
   \toprule
               集合元素及关系
               & 代数表示\\
@@ -25,15 +26,9 @@
               & $l: Ax+By+C=0$ \\
               点$A$在直线$l$上
               & $Am+Bn+C=0$\\
+            %   \multirow{2}{*}{直线$l_1$与直线$l_2$的交点是$A$}
               直线$l_1$与直线$l_2$的交点是$A$
-              & 方程组的解是 \begin{eqnarray}
-                \left \{
-                \begin{array}{l}
-                    x = m\\
-                    y = n
-                \end{array}	
-                \right .
-                \end{eqnarray}\\
+              &\parbox{8cm}{\begin{equation*}\mbox{方程组} \left \{ \begin{array}{l} A_{1}x+B_{1}y+C_{1} = 0\\ A_{2}x+B_{2}y+C_{2} = 0 \end{array} \right , \\ \mbox{的解是} \left \{ \begin{array}{l} x = m\\ y = n  \end{array} \right . \end{equation*}}\\
   \bottomrule
   \end{tabular}
 \end{table}
@@ -41,7 +36,7 @@
 
 \begin{theorem}{克莱姆法则}{cramer}
     已知直线$l_1$与$l_2$两条直线的方程组成的方程组如下：
-    \begin{eqnarray}
+    \begin{eqnarray}\label{eq:liner_equation}
         \left \{
         \begin{array}{l}
             A_1 x + B_1 y = C_1\\
@@ -50,41 +45,40 @@
         \right .
     \end{eqnarray}
     我们定义
-    \begin{enumerate}
-        \item  \begin{equation*}
+        \begin{equation*}
             \Delta =
             \begin{vmatrix}
-                A_1&B_1
+                A_1&B_1\\
                 A_2&B_2
             \end{vmatrix}
             = A_{1}B_{2}-B_{1}A_{2}
         \end{equation*}
-        \item \begin{equation*}
+        \begin{equation*}
            \Delta_{x}=
            \begin{vmatrix}
-               C_1&B_1
+               C_1&B_1\\
                C_2&B_2
            \end{vmatrix}
             = C_{1}B_{2}-B_{1}C_{2}
         \end{equation*}
-        \item \begin{equation*}
-           Delta_{y}=
+        \begin{equation*}
+           \Delta_{y}=
            \begin{vmatrix}
-               A_1&C_1
+               A_1&C_1\\
                A_2&C_2
            \end{vmatrix}
             = A_{1}C_{2}-C_{1}A_{2}
         \end{equation*}
-    \end{enumerate}
-    那么上述二元一次方程的解为：
-        \begin{eqnarray}
+    那么二元一次方程组\ref{eq:liner_equation}的解为：
+        \begin{eqnarray*}
             \left \{
             \begin{array}{l}
                 \displaystyle x = \frac{\Delta_{x}}{\Delta}\\
+                \\
                 \displaystyle y = \frac{\Delta_{y}}{\Delta}
             \end{array}	
             \right .
-        \end{eqnarray}\\
+        \end{eqnarray*}\\
 \end{theorem}
 
 
@@ -120,9 +114,46 @@
    \end{enumerate} 
 \end{note}
 
+\begin{note}
+   过两条直线交点的直线方程的求法:
+   \begin{enumerate}
+       \item 方程组解法：先解方程组求出已知两直线的交点坐标，再结合其他条件写出直线方程。
+       \item 直线待定系数法：先假设过两条直线交点的直线方程，再结合条件利用待定系数法求出参数。
+   \end{enumerate} 
+\end{note}
+
+\subsection{两点间的距离公式}
+
+\begin{definition}{两点间距离公式}{point-distance}
+平面上的两点$A(x_a, y_z)$, $B(x_b, y_b)$间的距离公式为：
+\begin{equation}
+    \abs{AB} = \sqrt{(x_b - x_a)^2 + (y_b - y_a)^2}
+\end{equation}
+特别的，平面上任意一点$P(x, y)$与原点$O(0,0)$间的距离为：
+\begin{equation}
+    \abs{OP} = \sqrt{x^2+y^2}
+\end{equation}
+\end{definition}
+
+\begin{note}
+利用坐标法解决平面几何问题：
+\begin{enumerate}
+    \item 建立（平面直角）坐标系，尽可能将有关元素放在坐标轴上;
+    \item 用坐标表示有关的量;
+    \item 将几何关系转化为坐标运算;
+    \item 把代数运算结果转化为几何结论。
+\end{enumerate}
+\end{note}
 
 \subsection{点到直线的距离、两条平行线间的距离}
 
+\begin{definition}{点到直线的距离}{point-line-distance}
+平面上任意一点$P$到直线$l$的距离，就是点$P$到直线$l$的垂线段的长度。
+\end{definition}
+
+\begin{definition}{平行线间的距离}{line-line-distance}
+两条平行线健的距离是夹在两平行线健公垂线的长度。
+\end{definition}
 
 %第一章题集
 \newpage
